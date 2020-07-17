@@ -6,7 +6,7 @@ This repository will contain the BigQuery scripts that are used to analyze the G
 
 ## Usage
 
-Google's permission model allows for those that have BigQuery User access to a BigQuery project to query all publically available data.  We are utilizing the 1TB free query resource every month to provide this free as a free resource to GENIE consortium members.  Due to this, please restrict all queries to the tables within the GENIE BigQuery project.  We have not found a way to limit the queries that members can do to only within a specific project.  If you want to query a publically available resource, please use a different billing code.
+Google's permission model allows for those that have BigQuery User access to a BigQuery project to query all publically available data.  We are utilizing the 1TB free query resource every month to provide this free as a free resource to GENIE consortium members.  Due to this, please only use the GENIE BigQuery project code for queries on the tables within the GENIE BigQuery project. For queries against other datasets, the user should supply their own project code so that those queries are billed to the user, not GENIE.
 
 Below are some resources to assist with the usage of BigQuery
 
