@@ -1,0 +1,50 @@
+[
+    {
+        "name": "Chromosome",
+        "description": "Chromosome",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Start_Position",
+        "description": "Start Position",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "End_Position",
+        "description": "End Position",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Hugo_Symbol",
+        "description": "Standardized Hugo Symbol",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "ID",
+        "description": "Center Submitted Hugo Symbol",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SEQ_ASSAY_ID",
+        "description": "Sequence Assay ID",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Feature_Type",
+        "description": "Exon, Intron or Integenic",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "includeInPanel",
+        "description": "Include in Gene Panel",
+        "mode": "NULLABLE",
+        "type": "BOOLEAN"
+    }
+]

@@ -1,0 +1,68 @@
+[
+    {
+        "name": "PATIENT_ID",
+        "description": "Patient Identifier",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SAMPLE_ID",
+        "description": "Sample Identifier",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "AGE_AT_SEQ_REPORT",
+        "description": "Age at Which Sequencing was Reported",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "ONCOTREE_CODE",
+        "description": "Oncotree Code",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SAMPLE_TYPE",
+        "description": "Sample Type",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SEQ_ASSAY_ID",
+        "description": "Sequence Assay ID",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "CANCER_TYPE",
+        "description": "Cancer Type",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "CANCER_TYPE_DETAILED",
+        "description": "Cancer Type Detailed",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "AGE_AT_SEQ_REPORT_DAYS",
+        "description": "Age at Which Sequencing was Reported",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SAMPLE_TYPE_DETAILED",
+        "description": "Sample Type Detailed",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SEQ_YEAR",
+        "description": "Sequence Year",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    }
+]

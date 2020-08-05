@@ -1,0 +1,80 @@
+[
+    {
+        "name": "PATIENT_ID",
+        "description": "Patient Identifier",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SEX",
+        "description": "Sex",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "PRIMARY_RACE",
+        "description": "Primary Race",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SECONDARY_RACE",
+        "description": "Secondary Race",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "TERTIARY_RACE",
+        "description": "Tertiary Race",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "ETHNICITY",
+        "description": "Ethnicity Category",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "BIRTH_YEAR",
+        "description": "Year of Birth",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "CENTER",
+        "description": "Center",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "INT_CONTACT",
+        "description": "Interval in days from DOB to date of last contact",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "INT_DOD",
+        "description": "Interval in days from DOB to DOD",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "YEAR_CONTACT",
+        "description": "Year of last contact",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "DEAD",
+        "description": "Vital Status",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "YEAR_DEATH",
+        "description": "Year of death",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    }
+]

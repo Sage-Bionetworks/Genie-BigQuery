@@ -1,0 +1,362 @@
+[
+    {
+        "name": "Hugo_Symbol",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Entrez_Gene_Id",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Center",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "NCBI_Build",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Chromosome",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Start_Position",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "End_Position",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Strand",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Consequence",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Variant_Classification",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Variant_Type",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Reference_Allele",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Tumor_Seq_Allele1",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Tumor_Seq_Allele2",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "dbSNP_RS",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "dbSNP_Val_Status",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Tumor_Sample_Barcode",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Matched_Norm_Sample_Barcode",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Match_Norm_Seq_Allele1",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Match_Norm_Seq_Allele2",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Tumor_Validation_Allele1",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Tumor_Validation_Allele2",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Match_Norm_Validation_Allele1",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Match_Norm_Validation_Allele2",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Verification_Status",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Validation_Status",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Mutation_Status",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Sequencing_Phase",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Sequence_Source",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Validation_Method",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Score",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "BAM_File",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Sequencer",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "t_ref_count",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "t_alt_count",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_ref_count",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "n_alt_count",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "HGVSc",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "HGVSp",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "HGVSp_Short",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Transcript_ID",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "RefSeq",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Protein_position",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Codons",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Hotspot",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "gnomAD_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_AFR_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_AMR_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_ASJ_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_EAS_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_FIN_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_NFE_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_OTH_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "gnomAD_SAS_AF",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "FILTER",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SWISSPROT",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "n_depth",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "t_depth",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "INTEGER"
+    },
+    {
+        "name": "Annotation_Status",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "mutationInCis_Flag",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "BOOLEAN"
+    }
+]
