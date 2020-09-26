@@ -13,3 +13,9 @@ Below are some resources to assist with the usage of BigQuery
 * [Controlling costs](https://cloud.google.com/bigquery/docs/best-practices-costs)
 
 * [BigQuery SQL](https://cloud.google.com/bigquery/docs/reference/standard-sql/functions-and-operators)
+
+And some additional resources for using Google AI Platform notebooks
+
+* [AI Platform Notebooks](https://cloud.google.com/ai-platform/notebooks/docs)
+
+* [Saving a notebook to GitHub](https://cloud.google.com/ai-platform/notebooks/docs/save-to-github)
