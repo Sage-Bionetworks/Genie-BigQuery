@@ -15,13 +15,30 @@ library(bigrquery)
 billing = "project-genie-query-prod"
 ```
 
+## GENIE version and tables
+
 Retrieve consortium release version in BigQuery.
 
 ```{r, echo=T, results='hide'}
 metadata <- bq_dataset_meta("project-genie-query-prod.consortium", fields = NULL)
 metadata$labels$release
 ```
-Current version: `r metadata$labels$release`.
+Current version: `r metadata$labels$release`
+
+Retrieve available tables
+```{r, echo=T, results='hide'}
+tables <- bq_dataset_tables("project-genie-query-prod.consortium")
+table_names = lapply(tables, function(x) {
+  paste(x$project, x$dataset, x$table, sep=".")
+})
+table_names
+```
+
+* `r table_names[[1]]`
+* `r table_names[[2]]`
+* `r table_names[[3]]`
+* `r table_names[[4]]`
+
 
 ## Simple Query
 
@@ -29,9 +46,12 @@ This query retrieves all the patients that have a KRAS mutation
 
 ```{r, results='hide'}
 sql <- paste(
-  "SELECT sample.SAMPLE_ID, mutation.Hugo_Symbol, mutation.Start_Position, sample.PATIENT_ID",
-  "FROM (select * from project-genie-query-prod.consortium.mutation where Hugo_Symbol = 'KRAS') as mutation",
-  "JOIN project-genie-query-prod.consortium.sample ON sample.SAMPLE_ID = mutation.Tumor_Sample_Barcode"
+  "SELECT sample.SAMPLE_ID, mutation.Hugo_Symbol,",
+  "       mutation.Start_Position, sample.PATIENT_ID",
+  "FROM (select * from project-genie-query-prod.consortium.mutation ",
+  "      where Hugo_Symbol = 'KRAS') as mutation",
+  "JOIN project-genie-query-prod.consortium.sample ",
+  "ON sample.SAMPLE_ID = mutation.Tumor_Sample_Barcode"
 )
 tb <- bq_project_query(billing, sql)
 kras_patients = bq_table_download(tb)
