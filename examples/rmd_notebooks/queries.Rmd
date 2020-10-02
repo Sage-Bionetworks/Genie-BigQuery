@@ -1,0 +1,114 @@
+---
+title: "GENIE BigQuery Example"
+output:
+  html_document:
+    df_print: paged
+---
+
+## Load bigrquery package
+
+You will have to run `bg_auth()` in your console to connect to bigquery after loading the bigrquery package.
+
+```{r, results='hide'}
+library(bigrquery)
+# bq_auth()  # This line will have to be run non-interactively in your console
+billing = "project-genie-query-prod"
+```
+
+## GENIE version and tables
+
+Retrieve consortium release version in BigQuery.
+
+```{r, echo=T, results='hide'}
+metadata <- bq_dataset_meta("project-genie-query-prod.consortium", fields = NULL)
+metadata$labels$release
+```
+Current version: `r metadata$labels$release`
+
+Retrieve available tables
+```{r, echo=T, results='hide'}
+tables <- bq_dataset_tables("project-genie-query-prod.consortium")
+table_names = lapply(tables, function(x) {
+  paste(x$project, x$dataset, x$table, sep=".")
+})
+table_names
+```
+
+* `r table_names[[1]]`
+* `r table_names[[2]]`
+* `r table_names[[3]]`
+* `r table_names[[4]]`
+
+
+## Simple Query
+
+This query retrieves all the patients that have a KRAS mutation
+
+```{r, results='hide'}
+sql <- paste(
+  "SELECT sample.SAMPLE_ID, mutation.Hugo_Symbol,",
+  "       mutation.Start_Position, sample.PATIENT_ID",
+  "FROM (select * from project-genie-query-prod.consortium.mutation ",
+  "      where Hugo_Symbol = 'KRAS') as mutation",
+  "JOIN project-genie-query-prod.consortium.sample ",
+  "ON sample.SAMPLE_ID = mutation.Tumor_Sample_Barcode"
+)
+tb <- bq_project_query(billing, sql)
+kras_patients = bq_table_download(tb)
+```
+
+```{r}
+knitr::kable(kras_patients[1:5, ])
+```
+
+# Advanced query
+
+```{r, results='hide'}
+sql = paste(
+  "WITH genes AS (",
+  "  SELECT * FROM UNNEST([",
+  "       'ABL1',   'AKT1',    'ALK',    'APC',",
+  "       'BRAF',   'CDH1',    'CDKN2A', 'CSF1R',",
+  "       'CTNNB1', 'EGFR',    'ERBB2',  'ERBB3',",
+  "       'ESR1',   'FBXW7',   'FGFR1',  'FGFR2',",
+  "       'FGFR3',  'FLT3',    'GNA11',  'GNAQ',",
+  "       'GNAS',   'HRAS',    'IDH1',   'IDH2',",
+  "       'JAK2',   'JAK3',    'KIT',    'KLLN',",
+  "       'KRAS',   'MAP2K1',  'MET',    'MLH1',",
+  "       'MPL',    'MYC',     'NOTCH1', 'NRAS',",
+  "       'PDGFRA', 'PIK3CA',  'PIK3R1', 'PTEN',",
+  "       'PTPN11', 'RB1',     'RET',    'RUNX1',",
+  "       'SMAD4',  'SMARCB1', 'SRC',    'STK11',",
+  "       'TP53',   'VHL',     'WRAP53'",
+  "   ]) AS symbol",
+  "), luad AS (",
+  "  SELECT DISTINCT patient_id, sample_id",
+  "    FROM `project-genie-query-prod.consortium.sample` ",
+  "   WHERE cancer_type_detailed = 'Lung Adenocarcinoma'",
+  "), patient AS (",
+  "  SELECT COUNT(DISTINCT patient_id) total",
+  "    FROM `project-genie-query-prod.consortium.mutation` m, luad",
+  "   WHERE m.Tumor_Sample_Barcode = luad.sample_id",
+  ")",
+  "  SELECT m.Hugo_Symbol, ",
+  "         COUNT(DISTINCT luad.patient_id)/(SELECT total FROM patient) mut_freq",
+  "    FROM `project-genie-query-prod.consortium.mutation` m, luad",
+  "   WHERE m.Hugo_Symbol IN (SELECT symbol FROM genes)",
+  "     AND m.Variant_Type ='SNP'",
+  "     AND m.Tumor_Sample_Barcode = luad.SAMPLE_ID ",
+  "GROUP BY m.Hugo_Symbol ",
+  "ORDER BY mut_freq desc"
+)
+tb <- bq_project_query(billing, sql)
+mutation_freq = bq_table_download(tb)
+
+```
+
+```{r}
+knitr::kable(mutation_freq)
+```
+
+
+
+
+
