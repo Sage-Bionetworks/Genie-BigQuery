@@ -20,7 +20,7 @@ Some additional resources for using Google AI Platform notebooks:
 
 * [Saving a notebook to GitHub](https://cloud.google.com/ai-platform/notebooks/docs/save-to-github)
 
-Resources for using BigQuery via R.
+Resources for using BigQuery via R:
 
 * [bigrquery](https://bigrquery.r-dbi.org/)
 
