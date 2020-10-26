@@ -27,4 +27,4 @@ Resources for using BigQuery via R:
 ## Examples notebooks
 
 * [AI notebooks](examples/AI_Notebooks)
-* [R markdown][examples/rmd_notebooks]
+* [R markdown](examples/rmd_notebooks)
