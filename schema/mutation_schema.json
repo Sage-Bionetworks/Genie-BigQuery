@@ -330,6 +330,30 @@
         "type": "STRING"
     },
     {
+        "name": "Polyphen_Prediction",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "Polyphen_Score",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
+        "name": "SIFT_Prediction",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "STRING"
+    },
+    {
+        "name": "SIFT_Score",
+        "description": "",
+        "mode": "NULLABLE",
+        "type": "FLOAT"
+    },
+    {
         "name": "SWISSPROT",
         "description": "",
         "mode": "NULLABLE",
