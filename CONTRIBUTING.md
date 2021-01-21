@@ -12,16 +12,16 @@ Then, [clone the repository](https://help.github.com/articles/cloning-a-reposito
 
 Add this repository as an [upstream remote](https://help.github.com/en/articles/configuring-a-remote-for-a-fork) on your local git repository so that you are able to fetch the latest commits.
 
-On your local machine make sure you have the latest version of the `master` branch:
+On your local machine make sure you have the latest version of the `main` branch:
 
 ```
-git checkout master
-git pull upstream master
+git checkout main
+git pull upstream main
 ```
 
 ### Commit and Create a Pull Request
 
-Create your own branch from the `master` branch.  Here I am naming my branch `analysis-a`, but it can be something more descriptive:
+Create your own branch from the `main` branch.  Here I am naming my branch `analysis-a`, but it can be something more descriptive:
 
 ```
 git checkout -b analysis-a
