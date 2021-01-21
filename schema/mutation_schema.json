@@ -264,12 +264,6 @@
         "type": "STRING"
     },
     {
-        "name": "Hotspot",
-        "description": "",
-        "mode": "NULLABLE",
-        "type": "STRING"
-    },
-    {
         "name": "gnomAD_AF",
         "description": "",
         "mode": "NULLABLE",
